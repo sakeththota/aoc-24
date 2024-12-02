@@ -19,6 +19,10 @@ export function parseAdjLists(input: string): [number[], number[]] {
   return [left, right];
 }
 
+export function parseLists(input: string): number[][] {
+  return input.trim().split('\n').map(line => line.split(" ").map(num => parseInt(num,10)))
+}
+
 export function withTiming<T>(fn: () => Promise<T>): Promise<T> {
   return (async () => {
     const start = performance.now();

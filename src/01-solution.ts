@@ -1,17 +1,16 @@
 import { withTiming, parseAdjLists, readInput } from "./lib";
 
-export const part1 = async () =>
-  withTiming(async () => {
-    const data = await readInput("01");
-    const [left, right] = parseAdjLists(data);
+export const part1 = async () => withTiming(async () => {
+  const data = await readInput("01");
+  const [left, right] = parseAdjLists(data);
 
-    let distance = 0;
-    for (let i = 0; i < left.length; ++i) {
-      distance = Math.abs(left[i] - right[i]);
-    }
+  let distance = 0;
+  for (let i = 0; i < left.length; ++i) {
+    distance = Math.abs(left[i] - right[i]);
+  }
 
-    return distance;
-  });
+  return distance;
+});
 
 export const part2 = async () => withTiming(async () => {
   const data = await readInput("01");

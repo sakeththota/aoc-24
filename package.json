@@ -1,0 +1,21 @@
+{
+  "name": "aoc-24",
+  "module": "index.ts",
+  "type": "module",
+  "bin": {
+    "aoc-24": "./index.ts"
+  },
+  "scripts": {
+    "start": "bun run index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  }
+}
+

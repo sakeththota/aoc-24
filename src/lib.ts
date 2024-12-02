@@ -4,7 +4,7 @@ export async function readInput(day: string): Promise<string> {
   return await Bun.file(`./src/${day}-input`).text();
 }
 
-export function parsePairedLists(input: string): [number[], number[]] {
+export function parseAdjLists(input: string): [number[], number[]] {
   const left: number[] = [];
   const right: number[] = [];
 

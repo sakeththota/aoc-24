@@ -61,7 +61,7 @@ async function runSolution(day: string, part?: string) {
 async function runAllSolutions() {
   console.log("🎄 Welcome to Advent of Code 2024!\n");
   console.log(
-    "⚠️  About to run all available solutions since day argument was not specified...",
+    "❗ About to run all available solutions since day argument was not specified...",
   );
 
   const proceed = await promptUser(

@@ -6,7 +6,7 @@ export const part1 = async () =>
     const singleLine = data.replace(/\n/g, "");
 
     const regex = /mul\(\d{1,3},\d{1,3}\)/g;
-    const matches = singleLine.match(regex);
+    const matches = singleLine.match(regex) || [];
 
     const sumOfProducts = matches.reduce((sum, match) => {
       const [x, y] = match.slice(4, -1).split(",");
@@ -23,7 +23,7 @@ export const part2 = async () =>
     const singleLine = data.replace(/\n/g, "");
 
     const regex = /mul\(\d{1,3},\d{1,3}\)|do\(\)|don't\(\)/g;
-    const matches = singleLine.match(regex);
+    const matches = singleLine.match(regex) || [];
 
     let sumOfProducts = 0;
     let enabled = true;

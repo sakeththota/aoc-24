@@ -48,14 +48,14 @@ export const part2 = async () =>
     ];
 
     let count = 0;
-    let valid = /MSAMS|MMASS|SMASM|SSAMM/;
+    let valid = new Set(["MSAMS", "MMASS", "SMASM", "SSAMM"]);
     for (let y = 1; y < ws.length - 1; ++y) {
       for (let x = 1; x < ws[0].length - 1; ++x) {
         let xmas = Array.from(
           searchDirs,
           ([dx, dy]) => ws[y + dy][x + dx],
         ).join("");
-        count += xmas.match(valid) ? 1 : 0;
+        count += valid.has(xmas) ? 1 : 0;
       }
     }
     return count;

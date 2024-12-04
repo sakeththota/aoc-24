@@ -20,7 +20,17 @@ export function parseAdjLists(input: string): [number[], number[]] {
 }
 
 export function parseLists(input: string): number[][] {
-  return input.trim().split('\n').map(line => line.split(" ").map(num => parseInt(num,10)))
+  return input
+    .trim()
+    .split("\n")
+    .map((line) => line.split(" ").map((num) => parseInt(num, 10)));
+}
+
+export function parseWordSearch(input: string): string[][] {
+  return input
+    .trim()
+    .split("\n")
+    .map((line) => [...line]);
 }
 
 export function withTiming<T>(fn: () => Promise<T>): Promise<T> {
